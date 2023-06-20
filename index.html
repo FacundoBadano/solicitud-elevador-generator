@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generador de solicitudes</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+    <h2>Generador de solicitudes</h2>
+    <form method="post" action="generator.php" id="generar_solicitudes">
+        <label for="cantidad_solicitudes">Cantidad de solicitudes:</label>
+        <input type="" id="cantidad_solicitudes" name="cantidad_solicitudes" value="">
+        <br>
+        <label for="tiempo_minimo">Tiempo minimo:</label>
+        <input type="" id="tiempo_minimo" name="tiempo_minimo" value="">
+        <br>
+        <label for="tiempo_maximo">Tiempo maximo:</label>
+        <input type="" id="tiempo_maximo" name="tiempo_maximo" value="">
+        <br>
+        <button type="button" onclick="enviarDatos()">Generar </button>
+    </form>
+</body>
+
+<script>
+    // Función para enviar los datos del formulario al archivo generator.php
+    function enviarDatos() {
+
+        console.log($('#cantidad_solicitudes').val());
+        console.log($('#tiempo_maximo').val());
+        console.log($('#tiempo_minimo').val());
+        $('#generar_solicitudes').submit();
+    }
+
+</script>
+</html>
